@@ -1,7 +1,9 @@
 //Reference - переменная, которая содержит адрес другой переменной
 #include <iostream>
 using namespace std;
+
 #define delimiter "\n-------------------------\n"
+
 void Exchange(int& a, int& b);
 
 void main()
