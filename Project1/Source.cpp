@@ -25,6 +25,11 @@ void main()
 		cout << *(arr + i) << "\t";
 	}
 	cout << endl;
+	for (int* p_arr = arr; *p_arr!= 0xcccccccc; p_arr++)
+	{
+		cout << *p_arr << "\t";
+	}
+	cout << endl;
 }
 
 /*
