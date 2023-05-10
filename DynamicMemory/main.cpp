@@ -20,7 +20,7 @@ void main()
 	FillRand(arr, n);
 	Print(arr, n);
 	int value, index;
-	/*cout << "Введите добавляемое значение в конец массива: "; cin >> value;
+	cout << "Введите добавляемое значение в конец массива: "; cin >> value;
 	arr = push_back(arr, n, value);
 	Print(arr, n);
 	cout << "Введите добавляемое значение в начало массива: "; cin >> value;
@@ -34,7 +34,7 @@ void main()
 	Print(arr, n);
 	cout << "Массив после удаления первого элемента: " << endl;
 	arr = pop_front(arr, n, value);
-	Print(arr, n);*/
+	Print(arr, n);
 	cout << "Введите индекс элемента, который нужно удалить: "; cin >> index;
 	arr = erase(arr, n, index);
 	Print(arr, n);
