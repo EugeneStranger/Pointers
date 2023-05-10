@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 void FillRand(int arr[], const int n);
@@ -39,35 +39,35 @@ void main()
 	setlocale(LC_ALL, "");
 #ifdef DYNAMIC_ARR1
 	int n;
-	cout << "Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ ìàññèâà: "; cin >> n;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: "; cin >> n;
 	int* arr = new int[n];
 	FillRand(arr, n);
 	Print(arr, n);
 	int value, index;
-	cout << "Ââåäèòå äîáàâëÿåìîå çíà÷åíèå â êîíåö ìàññèâà: "; cin >> value;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð¾Ð±Ð°Ð²Ð»ÑÐµÐ¼Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² ÐºÐ¾Ð½ÐµÑ† Ð¼Ð°ÑÑÐ¸Ð²Ð°: "; cin >> value;
 	arr = push_back(arr, n, value);
 	Print(arr, n);
-	cout << "Ââåäèòå äîáàâëÿåìîå çíà÷åíèå â íà÷àëî ìàññèâà: "; cin >> value;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð¾Ð±Ð°Ð²Ð»ÑÐµÐ¼Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð½Ð°Ñ‡Ð°Ð»Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð°: "; cin >> value;
 	arr = push_front(arr, n, value);
 	Print(arr, n);
-	cout << "Ââåäèòå äîáàâëÿåìîå çíà÷åíèå â ìàññèâ  è èíäåêñ, äîáàâëÿåìîãî ýëåìåíòà: "; cin >> value >> index;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð¾Ð±Ð°Ð²Ð»ÑÐµÐ¼Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²  Ð¸ Ð¸Ð½Ð´ÐµÐºÑ, Ð´Ð¾Ð±Ð°Ð²Ð»ÑÐµÐ¼Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: "; cin >> value >> index;
 	arr = insert(arr, n, value, index);
 	Print(arr, n);
-	cout << "Ìàññèâ ïîñëå óäàëåíèÿ ïîñëåäíåãî ýëåìåíòà: " << endl;
+	cout << "ÐœÐ°ÑÑÐ¸Ð² Ð¿Ð¾ÑÐ»Ðµ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ Ð¿Ð¾ÑÐ»ÐµÐ´Ð½ÐµÐ³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: " << endl;
 	arr = pop_back(arr, n, value);
 	Print(arr, n);
-	cout << "Ìàññèâ ïîñëå óäàëåíèÿ ïåðâîãî ýëåìåíòà: " << endl;
+	cout << "ÐœÐ°ÑÑÐ¸Ð² Ð¿Ð¾ÑÐ»Ðµ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ Ð¿ÐµÑ€Ð²Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: " << endl;
 	arr = pop_front(arr, n, value);
 	Print(arr, n);
-	cout << "Ââåäèòå èíäåêñ ýëåìåíòà, êîòîðûé íóæíî óäàëèòü: "; cin >> index;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð½ÑƒÐ¶Ð½Ð¾ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ: "; cin >> index;
 	arr = erase(arr, n, index);
 	Print(arr, n);
 	delete[] arr;
 #endif;
 #ifdef DYNAMIC_ARR2
 	int rows, cols, index;
-	cout << "Ââåäèòå êîëè÷åñòâî ñòðîê: "; cin >> rows;
-	cout << "Ââåäèòå êîëè÷åñòâî ñòîëáöîâ: "; cin >> cols;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ñ€Ð¾Ðº: "; cin >> rows;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²: "; cin >> cols;
 	int** arr = Allocate(rows, cols);
 	FillRand(arr, rows, cols);
 	Print(arr, rows, cols);
@@ -77,14 +77,14 @@ void main()
 	cout << delimeter;
 	arr = push_row_front(arr, rows, cols);
 	Print(arr, rows, cols);
-	cout << "Ââåäèòå èíäåêñ ïî êîòîðîìó íóæíî âñòàâèòü ïóñòóþ ñòðîêó: "; cin >> index;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ Ð¿Ð¾ ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð¼Ñƒ Ð½ÑƒÐ¶Ð½Ð¾ Ð²ÑÑ‚Ð°Ð²Ð¸Ñ‚ÑŒ Ð¿ÑƒÑÑ‚ÑƒÑŽ ÑÑ‚Ñ€Ð¾ÐºÑƒ: "; cin >> index;
 	cout << delimeter;
 	if ((index>=0)&(index<=rows))
 	{
 		arr = insert_row(arr, rows, cols, index);
 		Print(arr, rows, cols);
 	}
-	else cout << "Ââåä¸í íåêîððåêòíûé èíäåêñ!\n";
+	else cout << "Ð’Ð²ÐµÐ´Ñ‘Ð½ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð¸Ð½Ð´ÐµÐºÑ!\n";
 	cout << delimeter;
 	push_col_back(arr, rows, cols);
 	Print(arr, rows, cols);
@@ -92,41 +92,41 @@ void main()
 	push_col_front(arr, rows, cols);
 	Print(arr, rows, cols);
 	cout << delimeter;
-	cout << "Ââåäèòå èíäåêñ ïî êîòîðîìó íóæíî âñòàâèòü ïóñòîé ñòîëáåö: "; cin >> index;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ Ð¿Ð¾ ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð¼Ñƒ Ð½ÑƒÐ¶Ð½Ð¾ Ð²ÑÑ‚Ð°Ð²Ð¸Ñ‚ÑŒ Ð¿ÑƒÑÑ‚Ð¾Ð¹ ÑÑ‚Ð¾Ð»Ð±ÐµÑ†: "; cin >> index;
 	if ((index >= 0) & (index <= cols))
 	{
 		insert_col(arr, rows, cols, index);
 		Print(arr, rows, cols);
 	}
-	else cout << "Ââåä¸í íåêîððåêòíûé èíäåêñ!\n";
+	else cout << "Ð’Ð²ÐµÐ´Ñ‘Ð½ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð¸Ð½Ð´ÐµÐºÑ!\n";
 	cout << delimeter;
 	arr = pop_row_back(arr, rows, cols);
 	Print(arr, rows, cols);
 	cout << delimeter;
 	arr = pop_row_front(arr, rows, cols);
 	Print(arr, rows, cols);
-	cout << "Ââåäèòå èíäåêñ ïî êîòîðîìó íóæíî óäàëèòü ñòðîêó: "; cin >> index;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ Ð¿Ð¾ ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð¼Ñƒ Ð½ÑƒÐ¶Ð½Ð¾ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÑ‚Ñ€Ð¾ÐºÑƒ: "; cin >> index;
 	cout << delimeter;
 	if ((index >= 0) & (index < rows))
 	{
 		arr = erase_row(arr, rows, cols, index);
 		Print(arr, rows, cols);
 	}
-	else cout << "Ââåä¸í íåêîððåêòíûé èíäåêñ!\n";
+	else cout << "Ð’Ð²ÐµÐ´Ñ‘Ð½ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð¸Ð½Ð´ÐµÐºÑ!\n";
 	cout << delimeter;
 	pop_col_back(arr, rows, cols);
 	Print(arr, rows, cols);
 	cout << delimeter;
 	pop_col_front(arr, rows, cols);
 	Print(arr, rows, cols);
-	cout << "Ââåäèòå èíäåêñ ïî êîòîðîìó íóæíî óäàëèòü ñòîëáåö: "; cin >> index;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ Ð¿Ð¾ ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð¼Ñƒ Ð½ÑƒÐ¶Ð½Ð¾ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÑ‚Ð¾Ð»Ð±ÐµÑ†: "; cin >> index;
 	cout << delimeter;
 	if ((index >= 0) & (index < cols))
 	{
 		erase_col(arr, rows, cols, index);
 		Print(arr, rows, cols);
 	}
-	else cout << "Ââåä¸í íåêîððåêòíûé èíäåêñ!\n";*/
+	else cout << "Ð’Ð²ÐµÐ´Ñ‘Ð½ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð¸Ð½Ð´ÐµÐºÑ!\n";*/
 	Clear(arr, rows);
 #endif;
 }
@@ -197,21 +197,21 @@ void Clear(int** arr, int rows)
 
 
 int* push_back(int* arr, int& n, int value)
-{	//1. Ñîçäà¸ì áóôôåðíûé ìàññèâ íóæíîãî ðàçìåðà
+{	//1. Ð¡Ð¾Ð·Ð´Ð°Ñ‘Ð¼ Ð±ÑƒÑ„Ñ„ÐµÑ€Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð² Ð½ÑƒÐ¶Ð½Ð¾Ð³Ð¾ Ñ€Ð°Ð·Ð¼ÐµÑ€Ð°
 	int* buffer = new  int[n + 1];
-	//2. êîïèðóåì âñå çíà÷åíèÿ
+	//2. ÐºÐ¾Ð¿Ð¸Ñ€ÑƒÐµÐ¼ Ð²ÑÐµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ
 	for (int i = 0; i < n; i++)
 	{
 		buffer[i] = arr[i];
 	}
-	//3. Óäàëÿåì èñõîäíûé ìàññèâ
+	//3. Ð£Ð´Ð°Ð»ÑÐµÐ¼ Ð¸ÑÑ…Ð¾Ð´Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²
 	delete[] arr;
-	//4. Ïîäìåíÿåì àäðåñ èñõîäíîãî ìàññèâà àäðåñîì íîâîãî ìàññèâà
+	//4. ÐŸÐ¾Ð´Ð¼ÐµÐ½ÑÐµÐ¼ Ð°Ð´Ñ€ÐµÑ Ð¸ÑÑ…Ð¾Ð´Ð½Ð¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð° Ð°Ð´Ñ€ÐµÑÐ¾Ð¼ Ð½Ð¾Ð²Ð¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð°
 	arr = buffer;
 	buffer = nullptr;
-	//5. È òîëüêî ïîñëå ýòîãî â ìàññèâ arr ìîæíî äîáàâèòü çíà÷åíèå
+	//5. Ð˜ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¿Ð¾ÑÐ»Ðµ ÑÑ‚Ð¾Ð³Ð¾ Ð² Ð¼Ð°ÑÑÐ¸Ð² arr Ð¼Ð¾Ð¶Ð½Ð¾ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ
 	arr[n] = value;
-	//6. Ïîñëå äîáàâëåíèÿ ýëåìåíòà â ìàññèâ, êîëè÷åñòâî åãî ýëåìåíòîâ óâåëè÷èâàåòñÿ íà îäèí
+	//6. ÐŸÐ¾ÑÐ»Ðµ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð² Ð¼Ð°ÑÑÐ¸Ð², ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÐµÐ³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² ÑƒÐ²ÐµÐ»Ð¸Ñ‡Ð¸Ð²Ð°ÐµÑ‚ÑÑ Ð½Ð° Ð¾Ð´Ð¸Ð½
 	n++;
 	return arr;
 }
@@ -231,7 +231,7 @@ int* push_front(int* arr, int& n, int value)
 }
 int* insert(int* arr, int& n, int value, int index)
 {
-	if (index > n + 1) cout << "Ââåä¸í íåêîððåêòíûé èíäåêñ!\n";
+	if (index > n + 1) cout << "Ð’Ð²ÐµÐ´Ñ‘Ð½ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð¸Ð½Ð´ÐµÐºÑ!\n";
 	else
 	{
 		int* buffer = new  int[n + 1];
@@ -279,7 +279,7 @@ int* pop_front(int* arr, int& n, int value)
 }
 int* erase(int* arr, int& n, int index)
 {
-	if (index > n) cout << "Ââåä¸í íåêîððåêòíûé èíäåêñ!\n";
+	if (index > n) cout << "Ð’Ð²ÐµÐ´Ñ‘Ð½ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð¸Ð½Ð´ÐµÐºÑ!\n";
 	else
 	{
 		int* buffer = new  int[n - 1];
