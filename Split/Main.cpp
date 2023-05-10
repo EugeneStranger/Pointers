@@ -9,29 +9,21 @@ void main()
 	int n=10;
 	int* arr = new int[n];
 	FillRand(arr, n);
+	Print(arr, n);
 	int even_counter = 0, odd_counter = 0;
 	for (int i = 0; i < n; i++)
 	{
-		if (arr[i] % 2 == 0) { even_counter++;}
-		else { odd_counter++;}
+		if (arr[i] % 2 == 0)  even_counter++;
+		else				  odd_counter++;
 	}
 	int* even = new int[even_counter];
 	int* odd = new int[odd_counter];
-	int k = 0, j = 0;
-	for (int i = 0; i < n; i++)
+	for (int i = 0, k = 0, j = 0; i < n; i++)
 	{
-		if (arr[i] % 2 == 0)
-		{
-			even[k] = arr[i];
-			k++;
-		}
-		else
-		{
-			odd[j] = arr[i];
-			j++;
-		}
+		//if (arr[i] % 2 == 0)  even[k++] = arr[i]; 
+		//else				  odd[j++] = arr[i]; 
+		(arr[i] %2 ==0 ? even[k++] : odd[j++]) = arr[i];
 	}
-	Print(arr, n);
 	Print(even, even_counter);
 	Print(odd,odd_counter);
 	delete[] arr, even, odd;
