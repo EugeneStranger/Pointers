@@ -32,7 +32,7 @@ void erase_col(int** arr, const int rows, int& cols, const int index);
 
 //#define DYNAMIC_ARR1
 #define DYNAMIC_ARR2
-#define delimeter "\n---------------------------------------------------------------\n"
+#define delimeter "\n---------------------------------------------------------------\n\n"
 
 void main()
 {
@@ -158,7 +158,7 @@ void Print(int arr[], const int n)
 void Print(int** arr, const int rows, const int cols)
 {
 	
-	for (int i = 0; i < rows; i++)
+	/*for (int i = 0; i < rows; i++)
 	{
 		for (int j = 0; j < cols; j++)
 		{
@@ -166,26 +166,15 @@ void Print(int** arr, const int rows, const int cols)
 		}
 		cout << "\n";
 	}
-	cout << delimeter;
+	cout << delimeter;*/
 	for (int i = 0; i < rows; i++)
 	{
 		for (int j = 0; j < cols; j++)
 		{
-			cout << &(arr[i][j]) << "\t";
+			cout << *(arr[i] + j) << "\t";
 		}
 		cout << "\n";
 	}
-	cout << delimeter;
-	int* ptr = arr[0];
-	for (int i = 0; i < rows; i++)
-	{
-		for (int j = 0; j < cols; j++)
-		{
-			cout << *(ptr + i * cols + j) << "\t";
-		}
-		cout << "\n";
-	}
-
 }
 
 int** Allocate(const int rows, const int cols)
