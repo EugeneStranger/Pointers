@@ -157,16 +157,6 @@ void Print(int arr[], const int n)
 }
 void Print(int** arr, const int rows, const int cols)
 {
-	
-	/*for (int i = 0; i < rows; i++)
-	{
-		for (int j = 0; j < cols; j++)
-		{
-			cout << arr[i][j] << "\t";
-		}
-		cout << "\n";
-	}
-	cout << delimeter;*/
 	for (int i = 0; i < rows; i++)
 	{
 		for (int j = 0; j < cols; j++)
