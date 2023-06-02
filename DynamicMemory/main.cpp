@@ -71,8 +71,8 @@ void main()
 	int** arr = Allocate(rows, cols);
 	FillRand(arr, rows, cols);
 	Print(arr, rows, cols);
-	/*cout << delimeter;
-	arr = push_row_back(arr, rows, cols);
+	cout << delimeter;
+	/*arr = push_row_back(arr, rows, cols);
 	Print(arr, rows, cols);
 	cout << delimeter;
 	arr = push_row_front(arr, rows, cols);
@@ -99,11 +99,11 @@ void main()
 		Print(arr, rows, cols);
 	}
 	else cout << "Введён некорректный индекс!\n";
-	cout << delimeter;
+	cout << delimeter;*/
 	arr = pop_row_back(arr, rows, cols);
 	Print(arr, rows, cols);
 	cout << delimeter;
-	arr = pop_row_front(arr, rows, cols);
+	/*arr = pop_row_front(arr, rows, cols);
 	Print(arr, rows, cols);
 	cout << "Введите индекс по которому нужно удалить строку: "; cin >> index;
 	cout << delimeter;
@@ -392,15 +392,14 @@ void insert_col(int** arr, const int rows, int& cols, const int index)
 
 int** pop_row_back(int** arr, int& rows, const int cols)
 {
-	int** buffer = new int* [rows -1];
-	for (int i = 0; i < rows-1; i++)
+	delete[] arr[rows - 1];
+	int** buffer = new int* [--rows];
+	for (int i = 0; i < rows; i++)
 	{
 		buffer[i] = arr[i];
 	}
 	delete[] arr;
-	arr = buffer;
-	rows--;
-	return arr;
+	return buffer;
 }
 int** pop_row_front(int** arr, int& rows, const int cols)
 {
