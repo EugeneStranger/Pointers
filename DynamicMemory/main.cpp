@@ -3,10 +3,14 @@ using namespace std;
 
 void FillRand(int arr[], const int n);
 void FillRand(int** arr, const int rows, const int cols);
+
 void Print(int arr[], const int n);
 void Print(int** arr, const int rows, const int cols);
+
 int** Allocate(const int rows, const int cols);
+
 void Clear(int** arr, int rows);
+
 int* push_back(int* arr, int& n, int value);
 int* push_front(int* arr, int& n, int value);
 int* insert(int* arr, int& n, int value, int index);
